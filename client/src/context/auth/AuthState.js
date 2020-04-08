@@ -1,4 +1,4 @@
-import React, { useReducer } from 'reac';
+import React, { useReducer } from 'react';
 import AuthContext from './authContext';
 import authReducer from './authReducer';
 import {
@@ -46,3 +46,5 @@ const AuthState = (props) => {
     </AuthContext.Provider>
   );
 };
+
+export default AuthState;
