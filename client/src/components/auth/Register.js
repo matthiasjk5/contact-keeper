@@ -3,6 +3,7 @@ import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 
 const Register = (props) => {
+  console.log(props);
   const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
 
@@ -19,7 +20,7 @@ const Register = (props) => {
       clearErrors();
     }
     // eslint-disable-next-line
-  }, [error, isAuthenticated, props.hostory]);
+  }, [error, isAuthenticated, props.history]);
 
   const [user, setUser] = useState({
     name: '',
@@ -66,7 +67,7 @@ const Register = (props) => {
         <div className='form-group'>
           <label htmlFor='email'>Email Address</label>
           <input
-            type='text'
+            type='email'
             name='email'
             value={email}
             onChange={onChange}
